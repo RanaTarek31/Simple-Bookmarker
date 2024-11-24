@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker</title>
+    <!-- favicon -->
+     <link rel="icon" href="./images/bookmark.png">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- fontawesome css file -->
+     <link rel="stylesheet" href="./css/all.min.css">
+    <!-- bootstrap css file -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- main css file  -->
+     <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <h1 class="py-4 fw-semibold">Bookmark Manager</h1>
+            <div class="font-icons w-100 p-3 py-3 mb-4 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2 class="fs-4">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                  </h2>
+            </div>
+            <div class="form-group fw-bold">
+                <label for="bookmarkName"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name:</label>
+                <input type="text" id="bookmarkName" placeholder="Enter bookmark name">
+            </div>
+            <div class="form-group fw-bold">
+                <label for="bookmarkURL"><i class="fa-solid fa-link pe-2"></i>Website URL:</label>
+                <input type="text" id="bookmarkURL" placeholder="Enter website URL">
+                <p id="urlRules" class="hidden">The URL must start with "http://" or "https://".</p>
+            </div>
+            <button id="addButton" onclick="addBookMark()" class="btn btn-outline-danger mb-4">Add Bookmark</button>
+            <div class="form-group">
+                <label for="search"><i class="fa-solid fa-magnifying-glass me-2"></i>Search:</label>
+                <input type="text" id="search" onkeyup="searchBookmark(this.value)" placeholder="Search bookmarks">
+            </div>
+            <table class="text-center bg-light">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="bookmarkTable">
+                    <!-- <tr>
+                        <td>index</td>
+                        <td>website name</td>
+                        <td><a href="" class="btn btn-outline-danger" target="_blank">
+                            <i class="fa-regular fa-eye"></i>
+                        </a></td>
+                    </tr> -->
+                    <!-- <tr>
+                        <td>index</td>
+                        <td>website name</td>
+                        <td><button class="btn btn-outline-success">
+                            <i class="fa-regular fa-eye"></i>
+                        </button></td>
+                        <td><button class="btn btn-outline-danger">
+                            <i class="fa-solid fa-trash"></i>
+                        </button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+
+    <!-- bootstrap js file -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- main js file -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
